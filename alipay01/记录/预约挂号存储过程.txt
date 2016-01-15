@@ -1,0 +1,81 @@
+﻿USE [ehis]
+GO
+
+/****** Object:  StoredProcedure [dbo].[UserReg]    Script Date: 10/13/2015 15:42:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[UserReg](
+	@CardNo	varchar(20),
+	@ReserveTime varchar(2),--新增字段k_bespeak：ReserveTime(char(2))
+	@Pname	varchar(10),
+	@Deptin	varchar(7),
+	@Psex		varchar(1),
+	@Page		int,
+	@AgeUnit	varchar(1),
+	@Paddress	varchar(60),
+	@PTel		varchar(13),
+	@ID		varchar(18),
+	@Service	varchar(2),
+	@Doctor	varchar(5),
+	@AmPm	varchar(1),
+	@Status	varchar(1),
+	@BeDate	datetime,
+	@CDate	datetime,
+	@Updatetime	datetime,
+	@Operater	varchar(5),
+	@Type		int,
+	@SrlNo int out ,
+	@Regsrl int
+) AS
+
+	declare @Mrn int,@Regtype char(1),@cardNoCount int
+              --DECLARE @BeDate_Befor datetime
+              --select @BeDate_Befor = DATEADD( day , -90 ,   @BeDate )
+	select @SrlNo=(isnull(max(sysp1),0)+1) from hissysop where rdn = 3000
+	--select convert(char(10),getdate(),023) 
+	--select @RegSrl=count(1) from k_bespeak where Doctor=@Doctor and Deptin=@Deptin and convert(char(10),BeDate,023)=convert(char(10),@BeDate,023)
+	--select @Mrn=isnull(mrn,0) from cardinformation where cardnumber=@CardNo and pname=@Pname
+	--select @cardNoCount=count(1) from view_cardinformation where cardnumber=@CardNo
+	--if(@cardNoCount>0)
+	--SELECT @Mrn=isnull(p.mrn,0) FROM view_cardinformation c,view_pmain p where p.mrn=c.mrn and (c.cardnumber=@CardNo or c.mrn=@CardNo) and p.pname=@Pname
+	--else
+		begin
+			set @Mrn = @CardNo
+			set @CardNo = ''
+		end
+	
+	--if(@RegSrl<=5 )
+	--	goto Reg
+	--else if(@Type = 1)
+	--	goto Reg
+	--else
+	--	set @SrlNo=0
+	--Reg:
+	--爽约限制
+	declare @NoncomCount int
+	select @NoncomCount=count(1) 
+	from k_bespeak
+	where [ID]=@ID and status = '1'
+	if(@NoncomCount >=4)
+	begin
+		set @SrlNo=-1
+	end
+	else
+	begin
+		set @Regtype='1'
+		if(@Doctor != '')
+			set @Regtype='2'
+			if(@SrlNo<>0)
+			begin
+				update hissysop set sysp1=sysp1+1 where rdn = 3000
+				insert into k_bespeak (SrlNo,CardNo,Mrn,Pname,Deptin,Psex,Page,ageunit,Paddress,PTel,[ID],Service,RegSrl,Doctor,AmPm,Status,BeDate,CDate,Updatetime,Operater,Regtype) 
+				values (@SrlNo,@CardNo,@Mrn,@Pname,@Deptin,@Psex,@Page,@AgeUnit,@Paddress,@PTel,@ID,@Service,@Regsrl,@Doctor,@AmPm,@Status,@BeDate,@CDate,@Updatetime,@Operater,@Regtype)
+			end
+	end
+GO
+
+

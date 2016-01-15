@@ -1,0 +1,58 @@
+﻿
+@using alipay01.Models
+@model Recharge
+
+<form role="form" id="submitPayment" action="/alipay/payment" method="post">
+    @Html.AntiForgeryToken()
+    <div id="legend" class="">
+        <legend class="">预缴款充值</legend>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+
+            <div class="form-group">
+                <label>充值订单号</label>
+                <input type="text" class="form-control" id="flowid" name="flowid" placeholder="请输入充值流水号" value="@Model.flowid" readonly="readonly">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="form-group">
+                <label for="desc">病历号</label>
+                <input type="text" class="form-control" id="desc" name="mrn" placeholder="请输入充值信息" value="@Model.mrn" readonly="readonly">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="form-group">
+                <label for="mrn">预交款流水号</label>
+                <input type="text" class="form-control" id="mrn" name="desc" placeholder="请输入充值信息" value="@Model.desc" readonly="readonly">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="form-group">
+                <label for="fee">充值金额</label>
+                <input type="text" class="form-control" id="fee" name="fee" placeholder="请输入充值金额" value="@Model.fee" readonly="readonly">
+            </div>
+        </div>
+    </div>
+    <div class="row"><h1></h1></div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <button class="btn btn-block btn-primary btn-large" type="button" onclick="submit();" id="confirm">确认充值</button>
+        </div>
+    </div>
+
+</form>
+

@@ -1,0 +1,4 @@
+ERROR 2015-10-13 15:11:32,944  9197ms DeptPlanDAO            error              - GetDeptPlanList:[ 1 ]--  'path' 附近有语法错误。
+ERROR 2015-10-13 15:11:43,828 20080ms DeptPlanDAO            error              - GetDeptPlanList:[ 1 ]--  'path' 附近有语法错误。
+ERROR 2015-10-13 15:12:20,895 57147ms DeptPlanDAO            error              - GetDeptPlanList:[ 1 ]--  'path' 附近有语法错误。
+ERROR 2015-10-13 15:12:51,377 87630ms DeptPlanDAO            error              - GetDeptPlanList:[ 1 ]--  'path' 附近有语法错误。

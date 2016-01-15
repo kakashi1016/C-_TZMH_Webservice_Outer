@@ -1,0 +1,5 @@
+INFO  2015-06-10 15:01:59,218 30699ms Notify                 info               - 操作数据库有误：此 SqlParameterCollection 中未包含带有 ParameterName“@SMsg_xml”的 SqlParameter。
+INFO  2015-06-10 15:01:59,310 30791ms Notify                 info               - End:----
+INFO  2015-06-10 15:02:59,010  1300ms Notify                 info               - 操作数据库有误：'=' 附近有语法错误。
+INFO  2015-06-10 15:02:59,042  1332ms Notify                 info               - End:----
+INFO  2015-06-10 15:03:54,564  7176ms Notify                 info               - End:----

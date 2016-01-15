@@ -1,0 +1,3 @@
+INFO  2015-06-09 22:36:15,858 24693ms AliPayController       info               - 1111
+ERROR 2015-06-09 22:36:16,883 25718ms AliPayController       error              - 222222222
+WARN  2015-06-09 22:39:56,869  3548ms Test                   warn               - 1111
