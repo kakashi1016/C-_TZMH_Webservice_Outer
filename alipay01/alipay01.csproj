@@ -189,15 +189,20 @@
     <Compile Include="Controllers\AliPayController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OtherAssistanceController.cs" />
+    <Compile Include="Controllers\PatientInformationController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\LabTestController.cs" />
     <Compile Include="DAO\DeptPlanDAO.cs" />
+    <Compile Include="DAO\OtherAssistanceDAO.cs" />
+    <Compile Include="DAO\PatientInfoDAO.cs" />
     <Compile Include="DAO\LabTestDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DeptPlan.cs" />
     <Compile Include="Models\LabTest.cs" />
+    <Compile Include="Models\PatientInformation.cs" />
     <Compile Include="Models\Recharge.cs" />
     <Compile Include="MyUtils\CommandInfo.cs" />
     <Compile Include="MyUtils\CryptHelper.cs" />
@@ -277,9 +282,11 @@
     <Content Include="Views\AliPay\Error.cshtml" />
     <Content Include="Views\AliPay\Alipay.cshtml" />
     <Content Include="Views\AliPay\Success.cshtml" />
+    <Content Include="Views\OtherAssistance\IPView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\PatientInformation\" />
     <Folder Include="Views\Register\" />
     <Folder Include="Views\TabTest\" />
   </ItemGroup>

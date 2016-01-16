@@ -6,11 +6,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>X:\Code\C#\Web\预约挂号\发布</_PublishTargetUrl>
+    <_PublishTargetUrl>X:\Code\C#\Web\Outer_Webservice\发布</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/alipay01.dll">
-      <publishTime>01/14/2016 16:15:55</publishTime>
+      <publishTime>01/16/2016 15:45:51</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>05/26/2015 08:45:11</publishTime>
@@ -190,7 +190,7 @@
       <publishTime>05/26/2015 08:44:55</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>05/26/2015 08:44:55</publishTime>
+      <publishTime>01/15/2016 11:05:12</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>05/26/2015 08:45:02</publishTime>
@@ -330,6 +330,9 @@
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
       <publishTime>05/26/2015 08:45:14</publishTime>
     </File>
+    <File Include="Views/OtherAssistance/IPView.cshtml">
+      <publishTime>01/16/2016 15:41:58</publishTime>
+    </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>05/26/2015 08:45:14</publishTime>
     </File>
@@ -349,7 +352,7 @@
       <publishTime>05/26/2015 08:44:55</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/14/2016 16:15:56</publishTime>
+      <publishTime>01/15/2016 14:10:25</publishTime>
     </File>
     <File Include="记录/预约挂号存储过程.txt">
       <publishTime>10/13/2015 16:00:18</publishTime>

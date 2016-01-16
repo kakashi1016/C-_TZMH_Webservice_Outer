@@ -36,7 +36,7 @@ namespace alipay01.DAO
             {
                 //遍历列
                 tmp = new LabTest();
-                tmp.testNote = dr["note"].ToString();
+                tmp.testNote = dr["note"].ToString().Trim();
                 tmp.doDate = (int)dr["doDate"];
                 tmp.sID = int.Parse(dr["sID"].ToString().Trim());
                 tmp.orderNo = int.Parse(dr["orderNo"].ToString().Trim());
