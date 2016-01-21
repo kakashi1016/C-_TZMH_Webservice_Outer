@@ -28,7 +28,7 @@ namespace alipay01.DAO
             cmdParms[1].Value=dateStart;
             cmdParms[2].Value=dataEnd;
 
-            DataSet ds =  DbHelperSQL.Query(sqlString, cmdParms);
+            DataSet ds =  DbHelperSQL_18.Query(sqlString, cmdParms);
 
             DataTable dt=ds.Tables["ds"];
             //遍历行
@@ -69,7 +69,7 @@ namespace alipay01.DAO
             cmdParms[0].Value = sID;
             cmdParms[1].Value = doDate;
 
-            DataSet ds = DbHelperSQL.Query(sqlString, cmdParms);
+            DataSet ds = DbHelperSQL_18.Query(sqlString, cmdParms);
 
             DataTable dt = ds.Tables["ds"];
             //遍历行

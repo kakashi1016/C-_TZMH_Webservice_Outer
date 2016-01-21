@@ -22,7 +22,7 @@ namespace alipay01.DAO
             };
             cmdParms[0].Value=mrn;
 
-            DataSet ds =  DbHelperSQL.Query(sqlString, cmdParms);
+            DataSet ds =  DbHelperSQL_18.Query(sqlString, cmdParms);
 
             DataTable dt=ds.Tables["ds"];
             

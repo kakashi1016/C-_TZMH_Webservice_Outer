@@ -194,12 +194,14 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\LabTestController.cs" />
     <Compile Include="DAO\DeptPlanDAO.cs" />
+    <Compile Include="DAO\CheckUserDAO.cs" />
     <Compile Include="DAO\OtherAssistanceDAO.cs" />
     <Compile Include="DAO\PatientInfoDAO.cs" />
     <Compile Include="DAO\LabTestDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CheckUserInfo.cs" />
     <Compile Include="Models\DeptPlan.cs" />
     <Compile Include="Models\LabTest.cs" />
     <Compile Include="Models\PatientInformation.cs" />
